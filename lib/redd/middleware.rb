@@ -118,7 +118,7 @@ module Redd
                                    user_agent: @user_agent,
                                    limit_time: 0,
                                    auto_refresh: @auto_refresh)
-      client.access = Redd::Models::Access.new(@strategy, parsed_session)
+      client.access = Redd::Models::Access.new(parsed_session)
       Redd::Models::Session.new(client)
     end
   end
